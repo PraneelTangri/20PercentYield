@@ -1,0 +1,548 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://kit-pro.fontawesome.com/releases/v5.15.2/css/pro.min.css");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --animate-duration: 1.5s;
+}
+
+.left {
+  width: 50%;
+  float: left;
+}
+
+.right {
+  width: 50%;
+  float: left;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body .logo-waypoint {
+  position: absolute;
+  top: 50vh;
+  left: 0px;
+  z-index: -6;
+}
+
+body .code-waypoint {
+  position: absolute;
+  top: 130vh;
+  left: 0px;
+  z-index: -6;
+}
+
+body .signal-waypoint {
+  position: absolute;
+  top: 230vh;
+  left: 0px;
+  z-index: -6;
+}
+
+body nav {
+  padding: 5vh 0px;
+  height: 12vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+body nav.slideOpen {
+  height: 40vh !important;
+}
+
+body nav.slideOpen ul {
+  float: none;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 !important;
+  margin: 0 !important;
+  position: absolute;
+  width: 100vw !important;
+  top: 0vh;
+  left: 0px;
+  z-index: 6;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+body nav.slideOpen ul li {
+  margin: 20px 0px !important;
+  margin-left: -25vw !important;
+  float: none;
+}
+
+body nav.slideOpen ul li a {
+  color: #fff !important;
+}
+
+body nav h2 {
+  float: left;
+  color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+body nav ul {
+  list-style: none;
+  float: right;
+}
+
+body nav ul li {
+  float: left;
+  margin: 0px 20px;
+}
+
+body nav ul li a {
+  color: #aaa;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body nav ul li a:hover {
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body nav ul li:nth-child(3) {
+  background-color: #161616;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 15px;
+  margin-top: -10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+body nav ul li:nth-child(3):hover {
+  background-color: #242424;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body nav ul li:nth-child(3):hover a svg {
+  color: #fff;
+}
+
+body nav ul li:nth-child(3):hover a span {
+  color: #fff;
+}
+
+body nav ul li:nth-child(3) a svg {
+  height: 16px;
+  color: #aaa;
+}
+
+body nav ul li:nth-child(3) a span {
+  font-size: 11px;
+  color: #aaa;
+}
+
+body nav button {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  float: right;
+  margin-top: -5px;
+  display: none;
+}
+
+body nav button svg {
+  font-size: 32px;
+  color: #333;
+}
+
+body .banner {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: -10vh;
+  left: 0px;
+  z-index: -2;
+}
+
+body .banner video {
+  display: block;
+  width: 100vw;
+}
+
+body .logo-section {
+  margin-top: 100vh;
+  height: 100vh;
+  width: 100vw;
+  padding: 25vh 10vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .logo-section.nav-open {
+  margin-top: 0vh !important;
+}
+
+body .logo-section .left {
+  -webkit-box-shadow: -3px -3px 7px #dde1e7, 3px 3px 5px rgba(94, 104, 121, 0.288);
+          box-shadow: -3px -3px 7px #dde1e7, 3px 3px 5px rgba(94, 104, 121, 0.288);
+  border-radius: 15px;
+  padding-left: 7%;
+  padding-bottom: 7%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .logo-section .left h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 52px;
+  font-weight: 900;
+  margin: 10vh 0vw;
+  margin-bottom: 3vh;
+  color: #080808;
+}
+
+body .logo-section .left p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  width: 70%;
+}
+
+body .logo-section .right .logo {
+  margin-top: -10vh;
+}
+
+body .code-section {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 10vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .code-section .left .img-div {
+  background-image: linear-gradient(219deg, #585858 0%, #252525 100%);
+  -webkit-box-shadow: -3px -3px 10px rgba(94, 104, 121, 0.6), 3px 3px 8px rgba(94, 104, 121, 0.6);
+          box-shadow: -3px -3px 10px rgba(94, 104, 121, 0.6), 3px 3px 8px rgba(94, 104, 121, 0.6);
+  border-radius: 15px;
+  height: 580px;
+  width: 50vw;
+  max-width: 460px;
+  margin: 0px auto;
+}
+
+body .code-section .left .img-div img {
+  height: 100%;
+  width: 100%;
+}
+
+body .code-section .right {
+  width: 45%;
+  -webkit-box-shadow: -3px -3px 7px #dde1e7, 3px 3px 5px rgba(94, 104, 121, 0.288);
+          box-shadow: -3px -3px 7px #dde1e7, 3px 3px 5px rgba(94, 104, 121, 0.288);
+  border-radius: 15px;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .code-section .right h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 52px;
+  font-weight: 900;
+  margin: 10vh 0vw;
+  margin-bottom: 3vh;
+  color: #080808;
+}
+
+body .code-section .right p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  width: 70%;
+}
+
+body .signal-section {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 10vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .signal-section h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 52px;
+  font-weight: 900;
+  margin: 10vh 0vw;
+  margin-bottom: 3vh;
+  color: #080808;
+  text-align: center;
+}
+
+body .signal-section p {
+  display: block;
+  margin: 0px auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  width: 50%;
+  text-align: center;
+}
+
+body .signal-section img {
+  margin: 10vh 0px;
+  width: 100vw;
+}
+
+body footer {
+  padding-bottom: 10vh;
+}
+
+body footer ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body footer ul li {
+  margin: 00px 20px;
+}
+
+body footer ul li a {
+  text-decoration: none;
+  color: #00000059;
+  font-family: 'Poppins', sans-serif;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body footer ul li a:hover {
+  color: #00000099;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1200px) {
+  .logo-section {
+    margin-top: 40vh !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .code-waypoint {
+    top: 90vh !important;
+  }
+  .signal-waypoint {
+    top: 140vh !important;
+  }
+  .left {
+    float: none;
+    width: 80%;
+    margin: 20px auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .left h1 {
+    text-align: center;
+    font-size: 40px !important;
+  }
+  .left p {
+    text-align: center;
+    margin: 0px auto;
+    font-size: 16px !important;
+  }
+  .right {
+    float: none;
+    width: 80%;
+    margin: 10vh auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .right h1 {
+    text-align: center;
+    font-size: 40px !important;
+  }
+  .right p {
+    text-align: center;
+    margin: 0px auto;
+    font-size: 16px !important;
+  }
+  .logo-section {
+    height: 80vh !important;
+    margin-top: 50vh !important;
+    padding: 0px !important;
+  }
+  .logo-section .left {
+    width: 60% !important;
+    padding: 7% !important;
+  }
+  .logo-section .left h1 {
+    margin-top: 0px !important;
+  }
+  .logo-section .left p {
+    width: 90% !important;
+  }
+  .logo-section .right .logo {
+    height: 256px;
+    width: 256px;
+    margin: 0px auto;
+  }
+  .logo-section .right .logo img {
+    height: 100%;
+    width: 100%;
+  }
+  .code-section {
+    height: auto !important;
+    padding: 0px !important;
+  }
+  .code-section .left .img-div {
+    height: 250px;
+  }
+  .code-section .right {
+    padding: 5% !important;
+    width: 60% !important;
+  }
+  .code-section .right h1 {
+    margin-top: 0px !important;
+  }
+  .code-section .right p {
+    width: 80% !important;
+  }
+  .signal-section {
+    height: auto !important;
+    padding-top: 0px !important;
+  }
+  .signal-section h1 {
+    text-align: center;
+    font-size: 40px !important;
+  }
+  .signal-section p {
+    text-align: center;
+    margin: 0px auto;
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .left h1,
+  .right h1 {
+    font-size: 30px !important;
+  }
+  .left P,
+  .right P {
+    font-size: 14px !important;
+    width: 100% !important;
+  }
+  .logo-waypoint {
+    top: 20vh !important;
+  }
+  .code-waypoint {
+    top: 90vh !important;
+  }
+  .signal-waypoint {
+    top: 160vh !important;
+  }
+  nav {
+    height: 8vh !important;
+    padding: 0px !important;
+    width: 100vw !important;
+    background-color: #000 !important;
+  }
+  nav h2,
+  nav ul,
+  nav button {
+    -webkit-transform: translate(0%, 50%);
+            transform: translate(0%, 50%);
+  }
+  nav ul {
+    display: none !important;
+  }
+  nav button {
+    display: inline-block !important;
+    border: 0px;
+    margin-right: 6vw;
+    cursor: pointer;
+  }
+  .banner {
+    top: 8vh !important;
+  }
+  .logo-section {
+    height: 50vh !important;
+    margin-top: 40vh !important;
+  }
+  .logo-section .left {
+    width: 80vw !important;
+  }
+  .logo-section .left h1 {
+    font-size: 20px !important;
+  }
+  .logo-section .left p {
+    font-size: 10px !important;
+  }
+  .code-section .left .img-div {
+    height: 300px !important;
+  }
+  .code-section .right {
+    width: 80vw !important;
+  }
+  .code-section .right h1 {
+    font-size: 20px !important;
+  }
+  .code-section .right p {
+    font-size: 10px !important;
+  }
+  .signal-section {
+    padding: 0px !important;
+    margin-top: 20vh !important;
+  }
+  .signal-section h1 {
+    font-size: 20px !important;
+  }
+  .signal-section p {
+    font-size: 10px !important;
+  }
+  footer ul li a {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
